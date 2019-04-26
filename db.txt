@@ -1,0 +1,45 @@
+use leaderboard
+
+db.createCollection('battleroom');
+db.createCollection('player');
+
+db.battleroom.insert(
+	{
+		battleroom_id : 1,
+		players :[{playerId: 1, score:350 },{ playerId: 2, score:290 },{ playerId: 3, score:500 },{ playerId: 4, score:350 },{ playerId: 5, score:160 },{ playerId: 6, score:310 }]
+
+	}
+);
+
+db.battleroom.insert(
+	{
+		battleroom_id : 2,
+		players :[{playerId: 1, score:400 },{ playerId: 2, score:290 },{ playerId: 3, score:500 },{ playerId: 4, score:350 },{ playerId: 5, score:160 },{ playerId: 6, score:310 }]
+
+	}
+);
+
+db.player.insert({
+	playerID : 1,
+	playerName: "Mary"
+});
+db.player.insert({
+	playerID : 2,
+	playerName: "James"
+});
+db.player.insert({
+	playerID : 3,
+	playerName: "Jennifer"
+});
+db.player.insert({
+	playerID : 4,
+	playerName: "John"
+});
+db.player.insert({
+	playerID : 5,
+	playerName: "Patricia"
+});
+db.player.insert({
+	playerID : 6,
+	playerName: "Robert"
+});

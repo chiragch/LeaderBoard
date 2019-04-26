@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Organic</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="/css/main.css" />
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+</head>
+
+<body>
+
+  <% include header.ejs %>
+
+
+<div class="content">
+
+  <h1> RANDOM </h1>
+
+    <% for(var i=0;i<data.length; i++){ %>
+      <h2>BATTLE <%= data[i].battleroom_id %></h2>
+      <% for(var j = 0; j < data[i].players.length; j++){ %>
+          <h4><%= data[i].players[j].score %></h4>
+          <h4><%= data[i].players[j].playerId %></h4>
+          <h1>---------</h1>
+      <% } %>
+      <h1> ************ </h1>
+    <% } %>
+
+</div>
+
+  <% include footer.ejs %>
+
+</body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</html>
